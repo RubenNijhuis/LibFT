@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "./libft.h"
 
 int test_alpha()
 {
@@ -57,11 +58,6 @@ int test_digit()
 	return (1);
 }
 
-// int test_print(int c)
-// {
-
-// }
-
 int test_strlen()
 {
 	char *case1 = "This is 26 characters long"; // 26 chars
@@ -75,23 +71,36 @@ int test_strlen()
 	return (1);
 }
 
+int test_putendln()
+{
+	char *case1 = "This is string has a newLine"; // 26 chars + 1nl
+
+	ft_putendl_fd(case1, 1);
+	return (1);
+}
+
 int	main(void)
 {
 	unsigned int total = 34;
 	unsigned int respect = 0;
 
-	printf("%s   -  isAlpha \n", test_alpha() ? "✅":"❗️");
+	printf("%s   -  isAlpha \n", test_alpha()  ? "✅":"❗️");
 	respect++;
 
-	printf("%s   -  isAscii \n", test_ascii() ? "✅":"❗️");
+	printf("%s   -  isAscii \n", test_ascii()  ? "✅":"❗️");
 	respect++;
 
-	printf("%s   -  isDigit \n", test_digit() ? "✅":"❗️");
+	printf("%s   -  isDigit \n", test_digit()  ? "✅":"❗️");
 	respect++;
 
-	printf("%s   -  strlen \n", test_strlen() ? "✅":"❗️");
+	printf("%s   -  strlen \n",  test_strlen() ? "✅":"❗️");
 	respect++;
 
+	printf("\n");
+	printf("%s   -  putendln \n",  test_putendln() ? "✅":"❗️");
+	respect++;
+
+	printf("\n");
 	printf("Test:  %i respect, %i failed, %i total\n", respect, (total - respect), total);
 	return (0);
 }

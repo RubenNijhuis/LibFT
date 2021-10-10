@@ -8,6 +8,7 @@ void	*ft_memmove(void *dest, void *src, size_t len)
 	char	*lastDest;
 
 	d = dest;
+	s = src;
 	if (d < s)
 		while (len--)
 			*d++ = *s++;

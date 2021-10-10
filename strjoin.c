@@ -12,6 +12,6 @@ char *ft_strjoin(char const *s1, char const *s2)
 	if (string == NULL)
 		return (NULL);
 	ft_strlcpy(string, s1, strlen1);
-	ft_strlcpy(string + (strlen1 + 1), s2, strlen2);
+	ft_strlcpy(string + strlen1, s2, strlen2);
 	return (string);
 }

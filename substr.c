@@ -7,6 +7,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	string = malloc(len * sizeof(char));
 	if (string == NULL)
 		return (NULL);
-	ft_strlcpy(string, (s[start]), len);
+	ft_strlcpy(string, &s[start], len);
 	return (string);
 }
