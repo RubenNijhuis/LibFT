@@ -2,7 +2,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	unsigned int	i;
 
-	i = 0;
+	i = 1;
 	while (*s)
 	{
 		i++;
@@ -10,7 +10,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (i != 0)
 	{
-		if (*s == c)
+		if ((char)*s == (char)c)
 			return ((char *)s);
 		i--;
 		s--;

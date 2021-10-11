@@ -1,63 +1,61 @@
-OBJS	= atoi.o\
-				memcpy.o\
-				putchar_fd.o\
-				strchr.o\
-				isdigit.o\
-				strnstr.o\
-				strlcpy.o\
-				strjoin.o\
-				isascii.o\
-				memcmp.o\
-				split.o\
-				strlen.o\
-				isprint.o\
-				strncmp.o\
-				strdup.o\
-				isalpha.o\
-				calloc.o\
-				strrchr.o\
-				toupper.o\
-				memmove.o\
-				strtrim.o\
-				bzero.o\
-				memset.o\
-				substr.o\
-				memchr.o\
-				strlcat.o\
-				tolower.o\
-				putendl_fd.o\
-				isalnum.o\
-				putstr_fd.o\
 
-SOURCE	= atoi.c memcpy.c putchar_fd.c strchr.c isdigit.c strnstr.c strlcpy.c strjoin.c isascii.c memcmp.c split.c strlen.c isprint.c strncmp.c strdup.c isalpha.c calloc.c strrchr.c toupper.c main.c memmove.c strtrim.c bzero.c memset.c substr.c memchr.c strlcat.c tolower.c putendl_fd.c isalnum.c putstr_fd.c
-HEADER	= libft.h
-MAIN	= main.c
-OUT	= main.o
-CC	 = gcc
-FLAGS	 = -Wall -Werror -Wextra
-COMP	=$(CC) $(FLAGS)
-# -g option enables debugging mode 
-# -c flag generates object code for separate files
+SRCS = ft_atoi.c\
+	   ft_bzero.c\
+	   ft_calloc.c\
+	   ft_isalnum.c\
+	   ft_isalpha.c\
+	   ft_isascii.c\
+	   ft_isdigit.c\
+	   ft_isprint.c\
+	   ft_memchr.c\
+	   ft_memcmp.c\
+	   ft_memcpy.c\
+	   ft_memmove.c\
+	   ft_memset.c\
+	   ft_putchar_fd.c\
+	   ft_putendl_fd.c\
+	   ft_putstr_fd.c\
+	   ft_strchr.c\
+	   ft_strdup.c\
+	   ft_striteri.c\
+	   ft_strjoin.c\
+	   ft_strlcat.c\
+	   ft_strlcpy.c\
+	   ft_strlen.c\
+	   ft_strmapi.c\
+	   ft_strncmp.c\
+	   ft_strnstr.c\
+	   ft_strrchr.c\
+	   ft_substr.c\
+	   ft_tolower.c\
+	   ft_toupper.c
 
-# do everything
-build:
-	make objs
-	make main
-	make run
-	make clean
+NAME = libft.a
 
-# make objs out of lib files
-objs: $(SOURCE) $(HEADER)
-	$(COMP) -c $(SOURCE)
+OBJS = $(SRCS:.c=.o)
 
-# compile everything together
-main: $(MAIN) $(OBJS)
-	$(COMP) $^ -o $(OUT)
+OBJS_B = $(SRCS_B:.c=.o)
 
-# clean house
+CC = gcc
+
+FLAGS = -Wall -Werror -Wextra
+
+%.o : %.c libft.h
+	@$(CC) $(FLAGS) -c $<
+	@echo "Compiling: $<"
+
+$(NAME): $(OBJS)
+	@ar -cr $(NAME) $(OBJS)
+	@echo "Done creating archive"
+
+all: $(NAME)
+
 clean:
-	rm -f $(OBJS) $(OUT)
+	@rm -f $(OBJS) $(OBJS_B)
+	@echo "Done cleaning objects"
 
-# run the program
-run: $(OUT)
-	./$(OUT)
+fclean: clean
+	@rm -f $(NAME)
+	@echo "Done cleaning archive"
+
+re: fclean all

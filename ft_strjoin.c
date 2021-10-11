@@ -1,8 +1,8 @@
 #include "./libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *string;
+	char	*string;
 	size_t	strlen1;
 	size_t	strlen2;
 
