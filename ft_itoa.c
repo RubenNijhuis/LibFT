@@ -1,8 +1,8 @@
 #include "./libft.h"
 
-static size_t		nb_len(int nb)
+static size_t	nb_len(int nb)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nb <= 0)

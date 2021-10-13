@@ -2,9 +2,9 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int	*ptr;
+	void	*ptr;
 
-	ptr = (int *)malloc(count * sizeof(size));
+	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, count * size);
