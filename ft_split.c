@@ -71,6 +71,8 @@ char	**ft_split(char const *s, char c)
 	char			**string;
 	unsigned int	amountOfWords;
 
+	if (s == NULL)
+		return (NULL);
 	amountOfWords = getAmountOfWords(s, c);
 	string = malloc((amountOfWords + 1) * sizeof(char *));
 	if (string == NULL)

@@ -10,7 +10,6 @@ void	*ft_memset(void *dest, int val, size_t len)
 		*ptr = val;
 		ptr++;
 		len--;
-		
 	}
 	return (dest);
 }

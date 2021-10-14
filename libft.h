@@ -28,6 +28,7 @@ char	*ft_strnstr(const char *h, const char *n, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strtrim(char const *s1, char const *set);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *dest, void *src, size_t len);
