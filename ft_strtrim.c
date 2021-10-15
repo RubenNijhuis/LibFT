@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *src, char const *set)
 		--end;
 	len = end - src + 1;
 	string = malloc((len + 1) * sizeof(char));
-	if (!string)
+	if (string == NULL)
 		return (NULL);
 	ft_strlcpy(string, src, len + 1);
 	return (string);
