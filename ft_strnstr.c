@@ -4,6 +4,7 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
 	size_t	l;
 
+	l = *h;
 	if (*n == '\0')
 		return ((char *)h);
 	l = ft_strlen(n);
@@ -16,4 +17,3 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 	}
 	return (NULL);
 }
-s

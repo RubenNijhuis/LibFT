@@ -7,7 +7,7 @@ void	*ft_memmove(void *dest, void *src, size_t len)
 
 	d = dest;
 	s = src;
-	if (!dest && !src)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	if (d < s)
 		ft_memcpy(d, s, len);

@@ -1,6 +1,6 @@
 #include "./libft.h"
 
-static unsigned int	getWordLength(char const *s, char c)
+static unsigned int	get_word_length(char const *s, char c)
 {
 	unsigned int	i;
 
@@ -13,54 +13,54 @@ static unsigned int	getWordLength(char const *s, char c)
 	return (i);
 }
 
-static unsigned int	getAmountOfWords(char const *s, char c)
+static unsigned int	get_amount_of_words(char const *s, char c)
 {
-	unsigned int	amountWords;
-	unsigned int	newWord;
+	unsigned int	amount_words;
+	unsigned int	new_word;
 	unsigned int	i;
 
-	amountWords = 0;
-	newWord = 0;
+	amount_words = 0;
+	new_word = 0;
 	i = 0;
 	while (*s != 0)
 	{
-		if (newWord == 0 && *s != c)
+		if (new_word == 0 && *s != c)
 		{
-			amountWords++;
-			newWord = !newWord;
+			amount_words++;
+			new_word = !new_word;
 		}
 		if (*s == c)
-			newWord = 0;
+			new_word = 0;
 		i++;
 		s++;
 	}
-	return (amountWords);
+	return (amount_words);
 }
 
-static void	addWordsToString(const char *s, char c, char **string)
+static void	add_words_to_string(const char *s, char c, char **string)
 {
 	unsigned int	i;
-	unsigned int	newWord;
-	unsigned int	wordAmount;
-	unsigned int	wordLength;
+	unsigned int	new_word;
+	unsigned int	word_amount;
+	unsigned int	word_length;
 
 	i = 0;
-	newWord = 0;
-	wordAmount = 0;
+	new_word = 0;
+	word_amount = 0;
 	while (*s != 0)
 	{
-		if (newWord == 0 && *s != c)
+		if (new_word == 0 && *s != c)
 		{
-			newWord = !newWord;
-			wordLength = getWordLength(s, c);
-			string[wordAmount] = malloc((wordLength + 1) * sizeof(char));
-			ft_memcpy(string[wordAmount], s, wordLength);
-			string[wordAmount][wordLength] = 0;
-			wordAmount++;
-			wordLength = 0;
+			new_word = !new_word;
+			word_length = get_word_length(s, c);
+			string[word_amount] = malloc((word_length + 1) * sizeof(char));
+			ft_memcpy(string[word_amount], s, word_length);
+			string[word_amount][word_length] = 0;
+			word_amount++;
+			word_length = 0;
 		}
 		if (*s == c)
-			newWord = 0;
+			new_word = 0;
 		i++;
 		s++;
 	}
@@ -69,15 +69,15 @@ static void	addWordsToString(const char *s, char c, char **string)
 char	**ft_split(char const *s, char c)
 {
 	char			**string;
-	unsigned int	amountOfWords;
+	unsigned int	amount_of_words;
 
 	if (s == NULL)
 		return (NULL);
-	amountOfWords = getAmountOfWords(s, c);
-	string = malloc((amountOfWords + 1) * sizeof(char *));
+	amount_of_words = get_amount_of_words(s, c);
+	string = malloc((amount_of_words + 1) * sizeof(char *));
 	if (string == NULL)
 		return (NULL);
-	string[amountOfWords] = NULL;
-	addWordsToString(s, c, string);
+	string[amount_of_words] = NULL;
+	add_words_to_string(s, c, string);
 	return (string);
 }

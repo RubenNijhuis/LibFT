@@ -1,12 +1,15 @@
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != 0)
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != 0)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
 	}
-	if (*s == c)
-		return ((char *)s);
+	if (s[i] == c)
+		return ((char *)s + i);
 	return (0);
 }

@@ -1,31 +1,39 @@
 #include "./libft.h"
+#include <stdio.h>
 
 int	contains(char c, char const *set)
 {
-	while (*set != 0)
+	unsigned int	i;
+
+	i = 0;
+	while (set[i] != 0)
 	{
-		if (c == *set)
+		if (c == set[i])
 			return (1);
-		set++;
+		i++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *src, char const *set)
 {
 	char			*string;
-	unsigned int	start;
-	unsigned int	end;
+	const char		*end;
+	size_t			len;
 
-	start = 0;
-	end = ft_strlen(s1);
-	if (!s1 || !set)
+	if (src == NULL)
 		return (NULL);
-	while (contains(s1[start], set))
-		start++;
-	while (contains(s1[end], set))
-		end--;
-	string = ft_substr(s1, start, ft_strlen(s1)
-			- start - (ft_strlen(s1) - end) - 1);
+	while (contains(*src, set))
+		++src;
+	if (*src == '\0')
+		return (ft_strdup(""));
+	end = ft_strchr(src, 0) - 1;
+	while (contains(*end, set))
+		--end;
+	len = end - src + 1;
+	string = malloc((len + 1) * sizeof(char));
+	if (!string)
+		return (NULL);
+	ft_strlcpy(string, src, len + 1);
 	return (string);
 }

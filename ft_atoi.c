@@ -11,26 +11,26 @@ static int	contains(const char *set, char c)
 	return (0);
 }
 
-int	ft_atoi(const char *s)
+int	ft_atoi(const char *src)
 {
 	int		sign;
 	long	val;
 
 	sign = 1;
 	val = 0;
-	while (contains("\t\n\v\f\r ", *s))
-		s++;
-	if (*s == '+' || *s == '-')
+	while (contains("\t\n\v\f\r ", *src))
+		src++;
+	if (*src == '+' || *src == '-')
 	{
-		if (*s == '-')
+		if (*src == '-')
 			sign = -1;
-		s++;
+		src++;
 	}
-	while (ft_isdigit(*s))
+	while (ft_isdigit(*src))
 	{
 		val *= 10;
-		val += *s - '0';
-		s++;
+		val += *src - '0';
+		src++;
 	}
 	return ((int) val * sign);
 }
