@@ -1,4 +1,4 @@
-#include "./libft.h"
+#include "libft.h"
 #include <stdio.h>
 
 int	contains(char c, char const *set)

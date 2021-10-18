@@ -1,4 +1,4 @@
-#include "./libft.h"
+#include "libft.h"
 
 static unsigned int	get_word_length(char const *s, char c)
 {
@@ -37,18 +37,18 @@ static unsigned int	get_amount_of_words(char const *s, char c)
 	return (amount_words);
 }
 
-static void	free_everything(char **string)
-{
-	while (n)
-	{
-		--n;
-		free(*string[n]);
-	}
-	free(*string);
-	*string = NULL;
-}
+// static void	free_everything(char **string)
+// {
+// 	while (n)
+// 	{
+// 		--n;
+// 		free(*string[n]);
+// 	}
+// 	free(*string);
+// 	*string = NULL;
+// }
 
-static void	add_words_to_string(const char *s, char c, char **string, unsigned int amount_of_words)
+static void	add_words_to_string(const char *s, char c, char **string)
 {
 	unsigned int	i;
 	unsigned int	new_word;
@@ -65,11 +65,11 @@ static void	add_words_to_string(const char *s, char c, char **string, unsigned i
 			new_word = !new_word;
 			word_length = get_word_length(s, c);
 			string[word_amount] = malloc((word_length + 1) * sizeof(char));
-			if (string[word_amount] == NULL)
-			{
-				free_everything(string, i);
-				return ;
-			}
+			// if (string[word_amount] == NULL)
+			// {
+			// 	free_everything(string, i);
+			// 	return ;
+			// }
 			ft_memcpy(string[word_amount], s, word_length);
 			string[word_amount][word_length] = 0;
 			word_amount++;
@@ -94,6 +94,6 @@ char	**ft_split(char const *s, char c)
 	if (string == NULL)
 		return (NULL);
 	string[amount_of_words] = NULL;
-	add_words_to_string(s, c, string, amount_of_words);
+	add_words_to_string(s, c, string);
 	return (string);
 }
