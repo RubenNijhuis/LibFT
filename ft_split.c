@@ -1,5 +1,16 @@
 #include "libft.h"
 
+static void	free_everything(char **string, unsigned int word_amount)
+{
+	while (word_amount)
+	{
+		--word_amount;
+		free(string[word_amount]);
+	}
+	free(*string);
+	*string = NULL;
+}
+
 static unsigned int	get_word_length(char const *s, char c)
 {
 	unsigned int	i;
@@ -37,25 +48,12 @@ static unsigned int	get_amount_of_words(char const *s, char c)
 	return (amount_words);
 }
 
-// static void	free_everything(char **string)
-// {
-// 	while (n)
-// 	{
-// 		--n;
-// 		free(*string[n]);
-// 	}
-// 	free(*string);
-// 	*string = NULL;
-// }
-
 static void	add_words_to_string(const char *s, char c, char **string)
 {
-	unsigned int	i;
 	unsigned int	new_word;
 	unsigned int	word_amount;
 	unsigned int	word_length;
 
-	i = 0;
 	new_word = 0;
 	word_amount = 0;
 	while (*s != 0)
@@ -64,20 +62,18 @@ static void	add_words_to_string(const char *s, char c, char **string)
 		{
 			new_word = !new_word;
 			word_length = get_word_length(s, c);
-			string[word_amount] = malloc((word_length + 1) * sizeof(char));
-			// if (string[word_amount] == NULL)
-			// {
-			// 	free_everything(string, i);
-			// 	return ;
-			// }
-			ft_memcpy(string[word_amount], s, word_length);
-			string[word_amount][word_length] = 0;
-			word_amount++;
-			word_length = 0;
+            string[word_amount] = malloc((word_length + 1) * sizeof(char));
+            if (string[word_amount] == NULL)
+            {
+				free_everything(string, word_amount);
+				return ;
+			}
+            ft_strlcpy(string[word_amount], s, word_length + 1);
+            word_amount++;
+            word_length = 0;
 		}
 		if (*s == c)
 			new_word = 0;
-		i++;
 		s++;
 	}
 }
