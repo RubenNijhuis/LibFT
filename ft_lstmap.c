@@ -2,8 +2,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *copy_list;
-	t_list *mapped_block;
+	t_list	*copy_list;
+	t_list	*mapped_block;
 
 	copy_list = NULL;
 	while (lst != NULL && f != NULL)
