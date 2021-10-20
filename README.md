@@ -21,6 +21,15 @@ Add this line to your .c file
 
 And add the `libft.a` file that was created in the LibFT folder to your project.
 
+Your finished folder structure should look like this.
+```
+/-Project
+ | - main.c
+ | - libft.a
+ | - libft.h
+ | - ...
+```
+
 ### Notes
 This project started during my academic year '21 at Codam. Due to a norm they have for the code certain functions
 might be written in 'interesting' ways. In most cases these functions would be written in a differently structured
