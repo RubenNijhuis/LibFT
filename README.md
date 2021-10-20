@@ -1,13 +1,3 @@
-                                                                            
-                                                        ::::::::            
-   LibFT                                              :+:    :+:            
-                                                     +:+                    
-                                                    +#+                     
-                                                   +#+                      
-   rnijhuis <rnijhuis@student.codam.nl>           #+#    #+#                
-                                                 ########   odam.nl         
-                                                                            
-
 # LibFT
  🛠 Custom basic C library used for the '21 Codam curriculum
 
