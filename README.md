@@ -2,8 +2,7 @@
  🛠 Custom basic C library used for the '21 Codam curriculum
 
 ### Installation
-This project assumes you have Make installed, otherwise you can copy paste the commands into your terminal
-Clone the repo and compile it.
+This project assumes you have Make installed, otherwise you can copy paste the commands into your terminal.
 
 ```bash
 # Clone:
