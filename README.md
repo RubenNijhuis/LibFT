@@ -19,7 +19,7 @@ Add this line to your .c file
 #include "libft.h`
 ```
 
-And add the `libft.a` file that was created in the to your project.
+And add the `libft.a` file that was created in the LibFT folder to your project.
 
 ### Notes
 This project started during my academic year '21 at Codam. Due to a norm they have for the code certain functions
