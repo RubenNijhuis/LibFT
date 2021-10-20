@@ -23,11 +23,11 @@ And add the `libft.a` file that was created in the LibFT folder to your project.
 
 Your finished folder structure should look like this.
 ```
-/-Project
- | - main.c
- | - libft.a
- | - libft.h
- | - ...
+/- Project
+ |- main.c
+ |- libft.a
+ |- libft.h
+ |- ...
 ```
 
 ### Notes
