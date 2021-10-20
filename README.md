@@ -4,7 +4,8 @@
 ## Installation
 This project assumes you have Make installed, otherwise you can copy paste the commands into your terminal
 Clone the repo and compile it.
-`
+
+```bash
 # Clone:
 $ git clone https://github.com/RubenNijhuis/LibFT.git
 
@@ -12,15 +13,14 @@ $ git clone https://github.com/RubenNijhuis/LibFT.git
 $ Make all
 
 This will output the `.o` files and create an `libft.a` file in the LibFT directory, copy this file to your project.
-`
+```
 
 ## Usage
-`
-# Add this line to your .c file
-#include "libft.h
 
-# And add the libft.a file to your project.
-`
+Add this line to your .c file
+`#include "libft.h`
+
+And add the libft.a file to your project.
 
 ## Notes
 This project started during my academic year '21 at Codam. Due to a norm they have for the code certain functions
