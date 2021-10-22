@@ -53,26 +53,26 @@ CC = gcc
 
 FLAGS = -Wall -Werror -Wextra
 
+all: $(NAME)
+	@make bonus
+	@echo "✅ Built LibFT"
+
 %.o : %.c libft.h
 	@$(CC) $(FLAGS) -c $<
-	@echo "Compiling: $<"
+	@echo "🔨 Compiling: $<"
 
 $(NAME): $(OBJS)
 	@ar -cr $(NAME) $(OBJS)
-	@echo "Done creating archive"
-
-all: $(NAME)
 
 clean:
 	@rm -f $(OBJS) $(OBJS_B)
-	@echo "Done cleaning objects"
+	@echo "🧹 Done cleaning objects"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Done cleaning archive"
+	@echo "🧹 Done cleaning archive"
 
 re: fclean all
 
 bonus: $(OBJS_B)
 	@ar -cr $(NAME) $(OBJS_B)
-	@echo "Done adding bonus objects to archive"
