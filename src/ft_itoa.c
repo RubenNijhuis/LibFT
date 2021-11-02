@@ -1,27 +1,12 @@
 #include "libft.h"
 
-static size_t	nb_len(int nb)
-{
-	int	len;
-
-	len = 0;
-	if (nb <= 0)
-		len++;
-	while (nb)
-	{
-		len++;
-		nb = nb / 10;
-	}
-	return (len);
-}
-
 char	*ft_itoa(int n)
 {
 	int		len;
 	char	*str;
 	long	nb;
 
-	len = nb_len(n);
+	len = ft_nbrlen(n);
 	nb = n;
 	str = malloc(sizeof(char) * len + 1);
 	if (!str)

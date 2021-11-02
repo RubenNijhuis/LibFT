@@ -18,6 +18,7 @@ int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_nbrlen(int c);
 int		ft_atoi(const char *s);
 char	*ft_itoa(int nb);
 
