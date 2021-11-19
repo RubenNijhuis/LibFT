@@ -6,14 +6,14 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:45:24 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2021/11/09 09:45:25 by rnijhuis      ########   odam.nl         */
+/*   Updated: 2021/11/19 13:29:36 by rnijhuis      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
-{	
+{
 	char	*string;
 
 	string = malloc((ft_strlen(s1) + 1) * sizeof(char));

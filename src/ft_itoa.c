@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:44:02 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2021/11/09 09:44:02 by rnijhuis      ########   odam.nl         */
+/*   Updated: 2021/11/19 13:29:59 by rnijhuis      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 
 	len = ft_nbrlen(n);
 	nb = n;
-	str = malloc(sizeof(char) * len + 1);
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	if (nb < 0)
@@ -30,7 +30,6 @@ char	*ft_itoa(int n)
 	}
 	if (nb == 0)
 		str[0] = '0';
-	str[len] = '\0';
 	len--;
 	while (nb)
 	{

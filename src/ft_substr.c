@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:45:50 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2021/11/09 09:45:51 by rnijhuis      ########   odam.nl         */
+/*   Updated: 2021/11/19 13:27:38 by rnijhuis      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > src_len - start)
 		return (ft_strdup(s + start));
-	string = malloc((len + 1) * sizeof(char));
+	string = ft_calloc((len + 1), sizeof(char));
 	if (string == NULL)
 		return (NULL);
 	if (start + len > src_len)
@@ -33,6 +33,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		start_pos = len;
 	ft_memcpy(string, s + start, start_pos);
-	string[start_pos] = '\0';
 	return (string);
 }
