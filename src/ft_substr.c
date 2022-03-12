@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_substr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/03/12 15:51:02 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/03/12 15:51:03 by rubennijhui   ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

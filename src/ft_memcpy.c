@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memcpy.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/03/12 15:50:27 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/03/12 15:50:28 by rubennijhui   ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, void const *src, size_t len)

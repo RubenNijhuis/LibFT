@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/03/12 15:50:52 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/03/12 15:50:52 by rubennijhui   ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

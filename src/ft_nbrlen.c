@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_nbrlen.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/03/12 15:46:45 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/03/12 15:46:46 by rubennijhui   ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t	ft_nbrlen(int nb)
+int	ft_nbrlen(int nb)
 {
 	int	len;
 
