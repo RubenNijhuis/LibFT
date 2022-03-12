@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:48 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:50:49 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/03/12 15:57:59 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	strlen1 = ft_strlen(s1);
 	strlen2 = ft_strlen(s2);
-	string = malloc((strlen1 + strlen2 + 1) * sizeof(char));
+	string = ft_calloc((strlen1 + strlen2 + 1), sizeof(char));
 	if (string == NULL)
 		return (NULL);
 	ft_strlcpy(string, s1, strlen1 + 1);

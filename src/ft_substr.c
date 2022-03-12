@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:51:02 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:51:03 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/03/12 15:55:32 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > src_len - start)
 		return (ft_strdup(s + start));
-	string = malloc((len + 1) * sizeof(char));
+	string = ft_calloc((len + 1), sizeof(char));
 	if (string == NULL)
 		return (NULL);
 	if (start + len > src_len)
@@ -33,6 +33,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 		start_pos = len;
 	ft_memcpy(string, s + start, start_pos);
-	string[start_pos] = '\0';
 	return (string);
 }

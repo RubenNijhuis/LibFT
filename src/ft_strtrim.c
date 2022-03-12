@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:51:01 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:51:01 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/03/12 15:57:54 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *src, char const *set)
 	while (contains(*end, set))
 		--end;
 	len = end - src + 1;
-	string = malloc((len + 1) * sizeof(char));
+	string = ft_calloc((len + 1), sizeof(char));
 	if (string == NULL)
 		return (NULL);
 	ft_strlcpy(string, src, len + 1);

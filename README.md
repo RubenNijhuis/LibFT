@@ -16,12 +16,12 @@ $ Make all
 
 Add this line to your .c file
 ```c
-#include "libft.h`
+#include "libft.h"
 ```
 
 And add the `libft.a` file that was created in the LibFT folder to your project.
 
-Your finished folder structure should look like this.
+Your finished folder structure should look something like this.
 ```
 /- Project
  |- main.c

@@ -3,10 +3,17 @@
 /*                                                        ::::::::            */
 /*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
+<<<<<<< HEAD
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:06 by rubennijhui   #+#    #+#                 */
 /*   Updated: 2022/03/12 15:50:07 by rubennijhui   ########   odam.nl         */
+=======
+/*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2021/11/09 09:44:02 by rnijhuis      #+#    #+#                 */
+/*   Updated: 2021/11/19 13:29:59 by rnijhuis      ########   odam.nl         */
+>>>>>>> 46435a4407a0b557a1a1d8146d54399179769ce5
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +27,7 @@ char	*ft_itoa(int n)
 
 	len = ft_nbrlen(n);
 	nb = n;
-	str = malloc(sizeof(char) * len + 1);
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	if (nb < 0)
@@ -30,7 +37,6 @@ char	*ft_itoa(int n)
 	}
 	if (nb == 0)
 		str[0] = '0';
-	str[len] = '\0';
 	len--;
 	while (nb)
 	{
