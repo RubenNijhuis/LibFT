@@ -3,17 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strlcpy.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-<<<<<<< HEAD
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:52 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:50:52 by rubennijhui   ########   odam.nl         */
-=======
-/*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2021/11/09 09:45:40 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2021/11/09 09:45:41 by rnijhuis      ########   odam.nl         */
->>>>>>> 46435a4407a0b557a1a1d8146d54399179769ce5
+/*   Updated: 2022/03/12 15:59:18 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

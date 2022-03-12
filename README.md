@@ -1,33 +1,30 @@
 # LibFT
  🛠 Custom basic C library used for the '21 Codam curriculum
 
-### Installation
-This project assumes you have Make installed, otherwise you can copy paste the commands into your terminal.
+### Quick start
 
 ```bash
-# Clone:
-$ git clone https://github.com/RubenNijhuis/LibFT.git
-
-# Compile:
-$ Make all
+$ make
 ```
+
+Copy or include the `libft.h` and `libft.a` files in your project
 
 ### Usage
 
-Add this line to your .c file
+Include libft like this in your `.c` files
 ```c
 #include "libft.h"
 ```
+And compile your project with the `libft.a` file
 
-And add the `libft.a` file that was created in the LibFT folder to your project.
-
-Your finished folder structure should look something like this.
+### Folder structure
 ```
-/- Project
- |- main.c
- |- libft.a
- |- libft.h
- |- ...
+/ - LibFT
+    / - include
+        # all .h files can be found here
+    / - src
+        # the .c files
+    libft.a # will be created after running the make command
 ```
 
 ### Notes
