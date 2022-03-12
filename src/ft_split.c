@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:58:03 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/03/12 16:04:27 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 		if (new_word == 0 && *s != c)
 		{
 			new_word = !new_word;
-			(*string)[n_words] = ft_calloc((word_len(s, c) + 1) * sizeof(char));
+			(*string)[n_words] = ft_calloc((word_len(s, c) + 1), sizeof(char));
 			if ((*string)[n_words] == NULL)
 			{
 				free_everything(string, n_words);
