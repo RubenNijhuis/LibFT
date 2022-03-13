@@ -6,14 +6,23 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/03/13 17:06:48 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/03/13 17:35:15 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
+
+#=====================================#
+#========= General variables =========#
+#=====================================#
 
 NAME := libft
 INCLUDE_DIR := include
 SRC_DIR := src
+OBJS_DIR := objs
 OUTPUT := $(NAME).a
+
+#=====================================#
+#============ Input files ============#
+#=====================================#
 
 INC = -I $(INCLUDE_DIR)
 
@@ -65,19 +74,28 @@ SRCS =  ft_atoi.c \
 
 OBJS = $(addprefix objs/,$(notdir $(SRCS:.c=.o)))
 
+#=====================================#
+#========= Command arguments =========#
+#=====================================#
+
 CC = gcc
 CFLAGS = -Wall -Wextra -g $(INC)
+LDFLAGS = 
 
-all: $(NAME)
+#=====================================#
+#=============== Rules ===============#
+#=====================================#
 
 objs/%.o:src/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $^
 	@echo "🔨 Compiling: $<"
 
-$(NAME):$(OBJS)
-	@ar -cr $(NAME).a $(OBJS)
-	@echo "✅ Built LibFT"
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@ar -cr $(OUTPUT) $(OBJS)
+	@echo "✅ Built $(NAME)"
 
 clean:
 	@rm -rf $(OBJS_DIR)
