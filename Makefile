@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/03/13 17:35:15 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/03/13 20:31:15 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,15 +95,15 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar -cr $(OUTPUT) $(OBJS)
-	@echo "✅ Built $(NAME)"
+	@echo "✅ Built $(NAME) \n"
 
 clean:
 	@rm -rf $(OBJS_DIR)
-	@echo "🧹 Done cleaning objects"
+	@echo "🧹 Done cleaning $(NAME) objects"
 
 fclean: clean
 	@rm -f $(OUTPUT)
-	@echo "🧹 Done cleaning archive"
+	@echo "🧹 Done cleaning $(NAME) archive \n"
 
 re: fclean all
 
