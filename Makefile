@@ -6,13 +6,14 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/03/12 16:28:16 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/03/13 17:06:48 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft
 INCLUDE_DIR := include
 SRC_DIR := src
+OUTPUT := $(NAME).a
 
 INC = -I $(INCLUDE_DIR)
 
@@ -79,11 +80,11 @@ $(NAME):$(OBJS)
 	@echo "✅ Built LibFT"
 
 clean:
-	@rm -f $(OBJS)
+	@rm -rf $(OBJS_DIR)
 	@echo "🧹 Done cleaning objects"
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -f $(OUTPUT)
 	@echo "🧹 Done cleaning archive"
 
 re: fclean all
