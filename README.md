@@ -30,14 +30,4 @@ And compile your project with the `libft.a` file
 ```
 
 ## Testing
-This project has a custom tester written in Criterion. This means that to run this tester the Criterion package must be installed. Running the tester can be done through `make test` this will run the test suite and output a file in `/tests/` called `results.txt`.
-
-### Notes
-This project started during my academic year '21 at Codam. Due to a norm they have for the code certain functions
-might be written in 'interesting' ways. In most cases these functions would be written in a differently structured
-way improving speed or memory usage.
-
-This library will scale with the functionality I require during my time at Codam. Therefore some functions that might
-be obvious for you to use won't be added as I don't have a use for them.
-
-Happy coding :)
+This project has a custom tester written in Criterion. This means that to run this tester the Criterion package must be installed. Running the tester can be done through `make test` this will run the test suite and output the test results in the command line.
