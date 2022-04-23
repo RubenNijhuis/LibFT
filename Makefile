@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/04/23 14:20:45 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/04/23 14:21:25 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ test:
 
 fclean: clean
 	@rm -f $(NAME).a
+	@make fclean -C tests/
 	@echo "🧹 Done cleaning archive"
 
 re: fclean all
