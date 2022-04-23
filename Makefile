@@ -6,14 +6,30 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
+<<<<<<< HEAD
 #    Updated: 2022/04/23 14:21:25 by rubennijhui   ########   odam.nl          #
+=======
+#    Updated: 2022/03/13 20:31:15 by rubennijhui   ########   odam.nl          #
+>>>>>>> 79edb242bdbd5d5e2088c3c9005fa2589377a333
 #                                                                              #
 # **************************************************************************** #
+
+#=====================================#
+#========= General variables =========#
+#=====================================#
 
 NAME := libft
 INCLUDE_DIR := include
 SRC_DIR := src
 OBJS_DIR := objs
+<<<<<<< HEAD
+=======
+OUTPUT := $(NAME).a
+
+#=====================================#
+#============ Input files ============#
+#=====================================#
+>>>>>>> 79edb242bdbd5d5e2088c3c9005fa2589377a333
 
 INC = -I $(INCLUDE_DIR)
 
@@ -65,19 +81,28 @@ SRCS =  ft_atoi.c \
 
 OBJS = $(addprefix objs/,$(notdir $(SRCS:.c=.o)))
 
+#=====================================#
+#========= Command arguments =========#
+#=====================================#
+
 CC = gcc
 CFLAGS = -Wall -Wextra -g $(INC)
+LDFLAGS = 
 
-all: $(NAME)
+#=====================================#
+#=============== Rules ===============#
+#=====================================#
 
 objs/%.o:src/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $^
 	@echo "🔨 Compiling: $<"
 
-$(NAME):$(OBJS)
-	@ar -cr $(NAME).a $(OBJS)
-	@echo "✅ Built LibFT"
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@ar -cr $(OUTPUT) $(OBJS)
+	@echo "✅ Built $(NAME) \n"
 
 clean:
 	@rm -rf $(OBJS_DIR)
