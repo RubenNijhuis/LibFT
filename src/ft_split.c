@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 16:04:27 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/04/23 13:54:27 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 {
 	unsigned int	new_word;
 	unsigned int	n_words;
-	unsigned int	word_length;
 
 	new_word = 0;
 	n_words = 0;
@@ -81,7 +80,6 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 			}
 			ft_strlcpy((*string)[n_words], s, word_len(s, c) + 1);
 			n_words++;
-			word_length = 0;
 		}
 		if (*s == c)
 			new_word = 0;

@@ -24,8 +24,13 @@ And compile your project with the `libft.a` file
         # all .h files can be found here
     / - src
         # the .c files
+    / - tests
+        # all tests for the functions written in Criterion
     libft.a # will be created after running the make command
 ```
+
+## Testing
+This project has a custom tester written in Criterion. This means that to run this tester the Criterion package must be installed. Running the tester can be done through `make test` this will run the test suite and output a file in `/tests/` called `results.txt`.
 
 ### Notes
 This project started during my academic year '21 at Codam. Due to a norm they have for the code certain functions
