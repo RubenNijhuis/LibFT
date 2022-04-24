@@ -2,7 +2,7 @@
 #========= General variables =========#
 #=====================================#
 
-NAME := tester
+NAME := bin/tester
 INCLUDE_DIR := ../include
 SRC_DIR := src
 OBJS_DIR := objs
