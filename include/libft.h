@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/04/24 10:35:56 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/04/24 11:22:09 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void	*ft_memcpy(void *dest, void const *src, size_t len);
 void	*ft_memchr(const void *src, int c, size_t n);
 void	*ft_bzero(void *ptr, size_t len);
 void	*ft_calloc(size_t count, size_t size);
-void	ft_free_2d_array(char **arr);
 
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char s, int fd);
