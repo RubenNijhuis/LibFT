@@ -1,4 +1,10 @@
+// Lib to be tested
 #include "libft.h"
+
+// Functions to compare original to real version
+#include <string.h>
+
+// Testing lib
 #include <criterion/criterion.h>
 
 Test(is_alpha, basic) {
@@ -89,7 +95,7 @@ Test(to_upper, basic) {
 Test(number_length, basic) {
 	cr_expect(ft_nbrlen(1) == 1, "Expected '1' to be a length of '1'");
 	cr_expect(ft_nbrlen(1234567) == 7, "Expected '1234567' to be a length of '7'");
-	cr_expect(ft_nbrlen(-101) == 3, "Expected '-101' to be a length of '3'");
+	cr_expect(ft_nbrlen(-101) == 4, "Expected '-101' to be a length of '4'");
 	cr_expect(ft_nbrlen(24839) == 5, "Expected '24839' to be a length of '5'");
 }
 
@@ -98,4 +104,49 @@ Test(ft_atoi, basic) {
 	cr_expect(ft_atoi("381932") == 381932, "Expected '381932' to be '381932'");
 	cr_expect(ft_atoi("-100023") == -100023, "Expected '-100023' to be '-100023'");
 	cr_expect(ft_atoi("-69696969") == -69696969, "Expected '-69696969' to be '-69696969'");
+}
+
+Test(ft_itoa, basic) {
+	cr_expect(strcmp(ft_itoa(100), "100") == 0, "Expected '100'");
+	cr_expect(strcmp(ft_itoa(-1231), "-1231") == 0, "Expected '-1231'");
+	cr_expect(strcmp(ft_itoa(-1), "-1") == 0, "Expected '-1'");
+	cr_expect(strcmp(ft_itoa(54857483), "54857483") == 0, "Expected '54857483'");
+}
+
+Test(ft_strlen, basic) {
+	cr_expect(ft_strlen("100") == 3, "Expected '100' to be a length of 3");
+	cr_expect(ft_strlen("dhwuahdwaiojdiowajidjwiajdiojwahfufejaidfoawdpkaopfjnaueidijaopfgioewuqrwyaeruihfdbzncmpoaxjdmfnuaiailjwianodfbeaiuoirujnfaiuflisrjdmqainousfkgjhsrjiadnfeuabifkjwajdilwajfmidogzujfpa") == 182, "Expected a length of 182 chars");
+	cr_expect(ft_strlen("") == 0, "Expected '' to be a length of 0");
+	cr_expect(ft_strlen("Today is a great day") == 20, "Expected 'Today is a great day' to have a length of 21");
+}
+
+Test(ft_strlcpy, basic) {
+	const char *src = "String to be copied";
+	char *dst = calloc(strlen(src) + 1, sizeof(char));
+	ft_strlcpy(dst, src, strlen(src) + 1);
+
+	cr_expect(strcmp(src, dst) == 0, "Expected the string to be copied over");
+}
+
+Test(ft_strlcat, basic) {
+	char *str = "This is a string that might be long";
+	char buffer[17];
+
+	ft_strlcat(buffer,str,17);
+	cr_expect(strcmp(buffer, "This is a string") == 0, "Expected the string to be concatenated");
+}
+
+Test(ft_split, basic)
+{
+	char *test_string = "This is a string";
+	char **split_string = ft_split(test_string, ' ');
+
+	cr_expect(strcmp(split_string[0], "This") == 0, "Expected the first word to be to be 'This'");
+	cr_expect(strcmp(split_string[3], "string") == 0, "Expected the last word to be to be 'string'");
+
+	char *secondary_test_string = "This:string:is:split:based:on:colons";
+	char **secondary_split_string = ft_split(secondary_test_string, ':');
+
+	cr_expect(strcmp(secondary_split_string[1], "string") == 0, "Expected the second word to be to be 'string'");
+	cr_expect(strcmp(secondary_split_string[5], "on") == 0, "Expected the sixth word to be to be 'on'");
 }

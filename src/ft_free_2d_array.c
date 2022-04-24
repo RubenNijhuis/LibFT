@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_nbrlen.c                                        :+:    :+:            */
+/*   ft_free_2d_array.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/03/12 15:46:45 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/04/24 09:11:50 by rubennijhui   ########   odam.nl         */
+/*   Created: 2022/04/24 10:30:49 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/04/24 10:41:39 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-int	ft_nbrlen(long nb)
+void	ft_free_2d_array(char **arr)
 {
-	unsigned int	len;
+	void	ft_free_array(void *array)
+{
+	void	**start;
+	void	**arr;
 
-	len = 0;
-	if (nb < 0)
-		len++;
-	if (nb > LONG_MAX || nb < LONG_MIN)
-		return (nb);
-	while (nb)
-	{
-		nb = nb / 10;
-		len++;
-	}
-	return (len);
+	if (!array)
+		return ;
+	arr = array;
+	start = arr;
+	while (*arr)
+		free(*arr++);
+	free(start);
+}
 }

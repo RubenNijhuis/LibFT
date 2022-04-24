@@ -6,11 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-<<<<<<< HEAD
-#    Updated: 2022/04/23 14:21:25 by rubennijhui   ########   odam.nl          #
-=======
-#    Updated: 2022/03/13 20:31:15 by rubennijhui   ########   odam.nl          #
->>>>>>> 79edb242bdbd5d5e2088c3c9005fa2589377a333
+#    Updated: 2022/04/24 10:32:18 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +18,11 @@ NAME := libft
 INCLUDE_DIR := include
 SRC_DIR := src
 OBJS_DIR := objs
-<<<<<<< HEAD
-=======
 OUTPUT := $(NAME).a
 
 #=====================================#
 #============ Input files ============#
 #=====================================#
->>>>>>> 79edb242bdbd5d5e2088c3c9005fa2589377a333
 
 INC = -I $(INCLUDE_DIR)
 
@@ -77,7 +70,8 @@ SRCS =  ft_atoi.c \
 		ft_lstlast.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
-		ft_lstsize.c
+		ft_lstsize.c \
+		ft_free_2d_array.c
 
 OBJS = $(addprefix objs/,$(notdir $(SRCS:.c=.o)))
 
