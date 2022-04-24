@@ -6,11 +6,12 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:12 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:34 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/04/24 19:10:26 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

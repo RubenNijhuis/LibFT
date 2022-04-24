@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/04/24 18:25:08 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/04/24 19:14:21 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -55,7 +54,10 @@ void	*ft_memcpy(void *dest, void const *src, size_t len);
 void	*ft_memchr(const void *src, int c, size_t n);
 void	*ft_bzero(void *ptr, size_t len);
 void	*ft_calloc(size_t count, size_t size);
+
+int		ft_2d_arrlen(char **arr);
 void	ft_free_2d_array(char ***arr, unsigned int item_amount);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char s, int fd);
@@ -70,6 +72,5 @@ int		ft_lstsize(t_list *lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

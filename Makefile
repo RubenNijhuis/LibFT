@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/04/24 18:25:19 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/04/24 19:15:01 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS =  ft_atoi.c \
 		ft_lstnew.c \
 		ft_lstsize.c \
 		ft_free_2d_array.c \
+		ft_2d_arrlen.c \
 
 OBJS = $(addprefix objs/,$(notdir $(SRCS:.c=.o)))
 
