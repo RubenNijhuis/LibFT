@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/04/25 22:41:11 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/04/25 22:55:49 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/04/25 23:00:47 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,8 +61,11 @@ $(NAME):$(OBJS) $(LIBS)
 	@$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $(NAME)
 	@echo "✅ Built $(NAME)"
 
-run: $(NAME)
+run: $(NAME) $(LIBS)
 	@./$(NAME)
+
+../libft.a:
+	@make -C ../
 
 clean:
 	@rm -rf $(OBJS_DIR)

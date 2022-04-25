@@ -1,5 +1,5 @@
 # LibFT
- 🛠 Custom basic C library used for the '21 Codam curriculum
+ 🛠 Custom basic C library used for the Codam Core curriculum
 
 ### Quick start
 
