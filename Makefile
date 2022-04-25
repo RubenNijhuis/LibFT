@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/04/24 19:15:01 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/04/25 22:39:08 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,55 +26,61 @@ OUTPUT := $(NAME).a
 
 INC = -I $(INCLUDE_DIR)
 
-SRCS =  ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_error.c \
-		ft_isascii.c \
-		ft_isdigit.c \
-		ft_isprint.c \
-		ft_itoa.c \
-		ft_memchr.c \
-		ft_memcmp.c \
-		ft_memcpy.c \
-		ft_memmove.c \
-		ft_memset.c \
-		ft_putchar_fd.c \
-		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-		ft_putstr_fd.c \
-		ft_split.c \
-		ft_strchr.c \
-		ft_strdup.c \
-		ft_striteri.c \
-		ft_strjoin.c \
-		ft_strlcat.c \
-		ft_strlcpy.c \
-		ft_strlen.c \
-		ft_strmapi.c \
-		ft_strncmp.c \
-		ft_strnstr.c \
-		ft_strrchr.c \
-		ft_strtrim.c \
-		ft_substr.c \
-		ft_tolower.c \
-		ft_nbrlen.c \
-		ft_toupper.c \
-		ft_lstadd_back.c \
-		ft_lstadd_front.c \
-		ft_lstclear.c \
-		ft_lstdelone.c \
-		ft_lstiter.c \
-		ft_lstlast.c \
-		ft_lstmap.c \
-		ft_lstnew.c \
-		ft_lstsize.c \
-		ft_free_2d_array.c \
-		ft_2d_arrlen.c \
+SRCS =  misc/ft_free_2d_array.c \
+		misc/ft_nbrlen.c \
+		misc/ft_error.c \
+		misc/ft_2d_arrlen.c \
+		\
+		memory/ft_memcmp.c \
+		memory/ft_bzero.c \
+		memory/ft_memcpy.c \
+		memory/ft_memchr.c \
+		memory/ft_memset.c \
+		memory/ft_memmove.c \
+		memory/ft_calloc.c \
+		\
+		is_type/ft_isdigit.c \
+		is_type/ft_isascii.c \
+		is_type/ft_isprint.c \
+		is_type/ft_isalpha.c \
+		is_type/ft_isalnum.c \
+		\
+		linked_list/ft_lstadd_back.c \
+		linked_list/ft_lstnew.c \
+		linked_list/ft_lstlast.c \
+		linked_list/ft_lstclear.c \
+		linked_list/ft_lstiter.c \
+		linked_list/ft_lstmap.c \
+		linked_list/ft_lstsize.c \
+		linked_list/ft_lstadd_front.c \
+		linked_list/ft_lstdelone.c \
+		\
+		\
+		conversion/ft_atoi.c \
+		conversion/ft_itoa.c \
+		\
+		string/ft_strnstr.c \
+		string/ft_putstr_fd.c \
+		string/ft_strlcpy.c \
+		string/ft_strlen.c \
+		string/ft_putnbr_fd.c \
+		string/ft_strchr.c \
+		string/ft_striteri.c \
+		string/ft_strjoin.c \
+		string/ft_putendl_fd.c \
+		string/ft_toupper.c \
+		string/ft_split.c \
+		string/ft_strrchr.c \
+		string/ft_putchar_fd.c \
+		string/ft_substr.c \
+		string/ft_strncmp.c \
+		string/ft_strmapi.c \
+		string/ft_strtrim.c \
+		string/ft_strlcat.c \
+		string/ft_strdup.c \
+		string/ft_tolower.c \
 
-OBJS = $(addprefix objs/,$(notdir $(SRCS:.c=.o)))
+OBJS = $(addprefix $(OBJS_DIR)/,$(SRCS:.c=.o))
 
 #=====================================#
 #========= Command arguments =========#
@@ -91,7 +97,7 @@ LDFLAGS =
 objs/%.o:src/%.c
 	@mkdir -p $(dir $@)
 	@$(CC) -c $(CFLAGS) -o $@ $^
-	@echo "🔨 Compiling: $<"
+	@echo "🔨 Compiling: $^"
 
 all: $(NAME)
 
@@ -102,6 +108,9 @@ $(NAME): $(OBJS)
 clean:
 	@rm -rf $(OBJS_DIR)
 	@echo "🧹 Done cleaning objects"
+
+get_src_files:
+	@find $(SRC_DIR) | cut -b 5-
 
 test:
 	@make run -C tests/

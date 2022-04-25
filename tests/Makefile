@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
+#                                                    +#+                       #
+#    Created: 2022/04/25 22:41:11 by rubennijhui   #+#    #+#                  #
+#    Updated: 2022/04/25 22:55:49 by rubennijhui   ########   odam.nl          #
+#                                                                              #
+# **************************************************************************** #
+
 #=====================================#
 #========= General variables =========#
 #=====================================#
@@ -19,7 +31,10 @@ LIBS_HEADERS := -I /usr/local/Cellar/criterion/2.4.0_1/include
 
 INC := -I $(INCLUDE_DIR) $(LIBS_HEADERS)
 
-SRCS :=	main.c	\
+SRCS :=	misc.c		\
+		strings.c	\
+		is_type.c	\
+		conversion.c
 
 OBJS = $(addprefix $(OBJS_DIR)/,$(SRCS:.c=.o))
 
@@ -42,7 +57,7 @@ objs/%.o:src/%.c
 	
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIBS)
+$(NAME):$(OBJS) $(LIBS)
 	@$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $(NAME)
 	@echo "✅ Built $(NAME)"
 
