@@ -6,12 +6,23 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:51:02 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:55:32 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/03 22:42:38 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief 
+ * Copies a part of a string based on a 
+ * starting point and how many chars it 
+ * needs to copy
+ * 
+ * @param s 
+ * @param start 
+ * @param len 
+ * @return char* 
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*string;

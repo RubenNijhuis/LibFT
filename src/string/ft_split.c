@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/04/24 19:10:14 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/03 22:39:47 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,15 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 	}
 }
 
+/**
+ * @brief 
+ * Splits a string based on character
+ * and returns a null-terminated char * array
+ * 
+ * @param s to be split
+ * @param c to split on
+ * @return char**
+ */
 char	**ft_split(char const *s, char c)
 {
 	char			**string;

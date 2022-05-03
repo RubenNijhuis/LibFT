@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:49:49 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:58:16 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/03 22:56:31 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,6 @@ static	int	overflow_check(const char *str, int sign)
 	return (2);
 }
 
-static int	contains(const char *set, char c)
-{
-	while (*set)
-	{
-		if (*set == c)
-			return (1);
-		set++;
-	}
-	return (0);
-}
-
 int	ft_atoi(const char *src)
 {
 	int				sign;
@@ -46,7 +35,7 @@ int	ft_atoi(const char *src)
 	sign = 1;
 	val = 0;
 	i = 0;
-	while (contains("\t\n\v\f\r ", src[i]))
+	while (ft_isinset("\t\n\v\f\r ", src[i]))
 		i++;
 	if (src[i] == '+' || src[i] == '-')
 	{

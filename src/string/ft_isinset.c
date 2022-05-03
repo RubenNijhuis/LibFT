@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_striteri.c                                      :+:    :+:            */
+/*   ft_isinset.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/03/12 15:50:47 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:43:37 by rubennijhui   ########   odam.nl         */
+/*   Created: 2022/05/03 22:53:15 by rubennijhui   #+#    #+#                 */
+/*   Updated: 2022/05/03 22:58:11 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /**
  * @brief 
- * Runs a given function on each character in the string
+ * Checks if a char is in a set of chars 
+ * and returns true of false based on an int
  * 
- * @param s The given string
- * @param f A function to be called on each string
+ * @param c 
+ * @param set 
+ * @return int 
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+int	ft_isinset(char const *set, char c)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[i] != 0)
+	while (set[i] != 0)
 	{
-		f(i, &s[i]);
+		if (c == set[i])
+			return (1);
 		i++;
 	}
+	return (0);
 }
