@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/05/03 22:55:13 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/05/03 22:59:05 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,6 +120,12 @@ fclean: clean
 	@rm -f $(NAME).a
 	@make fclean -C tests/
 	@echo "🧹 Done cleaning archive"
+
+norm:
+	@echo "\033[92m========= $(NAME) norm ========\033[0m"
+	@-norminette $(INCLUDE_DIR)
+	@-norminette $(SRC_DIR)
+	@echo "\033[92m========= $(NAME) norm ========\033[0m"
 
 re: fclean all
 
