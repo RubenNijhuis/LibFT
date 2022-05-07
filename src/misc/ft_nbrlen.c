@@ -6,14 +6,14 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:46:45 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/04/24 09:11:50 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 11:30:20 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-int	ft_nbrlen(long nb)
+uint32_t	ft_nbrlen(int64_t nb)
 {
 	unsigned int	len;
 

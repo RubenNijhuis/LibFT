@@ -6,17 +6,17 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:06 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/04/24 09:11:28 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 11:30:46 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int64_t n)
 {
-	int		len;
-	char	*str;
-	long	nb;
+	uint32_t	len;
+	char		*str;
+	long		nb;
 
 	len = ft_nbrlen(n);
 	nb = n;
