@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:51:02 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:42:38 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  * @param len 
  * @return char* 
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, uint32_t start, size_t len)
 {
 	char	*string;
 	size_t	start_pos;

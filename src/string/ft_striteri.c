@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:47 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:43:37 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
  * @param s The given string
  * @param f A function to be called on each string
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(uint32_t, char*))
 {
-	unsigned int	i;
+	uint32_t	i;
 
 	i = 0;
 	if (s == NULL || f == NULL)

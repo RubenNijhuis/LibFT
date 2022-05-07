@@ -6,15 +6,15 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:49:49 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:56:31 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:15:47 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	overflow_check(const char *str, int sign)
+static	int32_t overflow_check(const char *str, int32_t sign)
 {
-	int	i;
+	int32_t	i;
 
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -26,11 +26,11 @@ static	int	overflow_check(const char *str, int sign)
 	return (2);
 }
 
-int	ft_atoi(const char *src)
+int64_t	ft_atoi(const char *src)
 {
-	int				sign;
-	long			val;
-	unsigned int	i;
+	int32_t		sign;
+	int64_t		val;
+	uint32_t	i;
 
 	sign = 1;
 	val = 0;
@@ -51,5 +51,5 @@ int	ft_atoi(const char *src)
 		val += src[i] - '0';
 		i++;
 	}
-	return ((int) val * sign);
+	return ((int64_t) val * sign);
 }

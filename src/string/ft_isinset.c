@@ -6,22 +6,24 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/05/03 22:53:15 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:58:11 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:17:26 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /**
  * @brief 
  * Checks if a char is in a set of chars 
- * and returns true of false based on an int
+ * and returns true of false based on a char
  * 
  * @param c 
  * @param set 
- * @return int 
+ * @return int32_t
  */
-int	ft_isinset(char const *set, char c)
+int32_t	ft_isinset(char const *set, char c)
 {
-	unsigned int	i;
+	uint32_t	i;
 
 	i = 0;
 	while (set[i] != 0)

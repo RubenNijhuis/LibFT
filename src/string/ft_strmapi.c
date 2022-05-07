@@ -6,16 +6,16 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:55 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:15 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(uint32_t, char))
 {
 	char			*string;
-	unsigned int	i;
+	uint32_t	i;
 
 	i = 0;
 	if (s == NULL || f == NULL)

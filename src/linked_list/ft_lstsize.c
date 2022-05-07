@@ -6,15 +6,15 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:22 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:31 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:09:13 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+uint32_t	ft_lstsize(t_list *lst)
 {
-	int	length;
+	uint32_t	length;
 
 	length = 1;
 	if (!lst)

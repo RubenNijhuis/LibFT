@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:46:45 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/07 11:30:20 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:10:32 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 uint32_t	ft_nbrlen(int64_t nb)
 {
-	unsigned int	len;
+	uint32_t	len;
 
 	len = 0;
 	if (nb < 0)

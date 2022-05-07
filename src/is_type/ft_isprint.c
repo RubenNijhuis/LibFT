@@ -6,11 +6,13 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:04 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:38 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:08:57 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int32_t	ft_isprint(int32_t c)
 {
 	return (c >= ' ' && c <= '~');
 }

@@ -6,13 +6,13 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:26 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:29 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:09:33 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int32_t	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*one;
 	const unsigned char	*two;

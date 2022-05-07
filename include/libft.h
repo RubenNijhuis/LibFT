@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/05/07 11:29:57 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:16:52 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int32_t		ft_isdigit(int32_t c);
 int32_t		ft_tolower(int32_t c);
 int32_t		ft_toupper(int32_t c);
 uint32_t	ft_nbrlen(int64_t c);
-int32_t		ft_atoi(const char *s);
+int64_t		ft_atoi(const char *s);
 char		*ft_itoa(int64_t nb);
 
 size_t		ft_strlen(const char *str);
@@ -56,20 +56,20 @@ void		*ft_memchr(const void *src, int32_t c, size_t n);
 void		*ft_bzero(void *ptr, size_t len);
 void		*ft_calloc(size_t count, size_t size);
 
-int32_t		ft_2d_arrlen(char **arr);
+uint32_t	ft_2d_arrlen(char **arr);
 void		ft_free_2d_array(char ***arr, uint32_t item_amount);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-void		ft_putendl_fd(char *s, int32_t fd);
-void		ft_putchar_fd(char s, int32_t fd);
-void		ft_putstr_fd(char *s, int32_t fd);
-void		ft_putnbr_fd(int32_t nb, int32_t fd);
+void		ft_putendl_fd(char *s, uint32_t fd);
+void		ft_putchar_fd(char s, uint32_t fd);
+void		ft_putstr_fd(char *s, uint32_t fd);
+void		ft_putnbr_fd(int64_t nb, uint32_t fd);
 
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstadd_front(t_list **lst, t_list *new);
-int32_t		ft_lstsize(t_list *lst);
+uint32_t	ft_lstsize(t_list *lst);
 void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));

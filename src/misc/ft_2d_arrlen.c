@@ -6,15 +6,15 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/24 19:09:04 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/04/24 19:13:52 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:09:55 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_2d_arrlen(char **arr)
+uint32_t	ft_2d_arrlen(char **arr)
 {
-	int	i;
+	uint32_t	i;
 
 	i = 0;
 	while (arr[i] != NULL)

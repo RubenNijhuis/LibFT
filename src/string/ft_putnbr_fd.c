@@ -6,16 +6,16 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:39 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:24 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:11:23 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int64_t n, uint32_t fd)
 {
 	char	s;
-	long	nb;
+	int64_t	nb;
 
 	nb = n;
 	if (nb < 0)

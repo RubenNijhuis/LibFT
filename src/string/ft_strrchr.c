@@ -6,13 +6,15 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:59 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:09 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:14:19 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int32_t c)
 {
-	unsigned int	i;
+	uint32_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

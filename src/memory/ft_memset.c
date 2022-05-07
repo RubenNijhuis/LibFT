@@ -6,13 +6,13 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:31 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/03/12 15:59:28 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:09:44 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int val, size_t len)
+void	*ft_memset(void *dest, int32_t val, size_t len)
 {
 	unsigned char	*ptr_dest;
 

@@ -6,14 +6,14 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/03 22:39:47 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static void	free_everything(char ***string, unsigned int word_amount)
+static void	free_everything(char ***string, uint32_t word_amount)
 {
 	while (word_amount > 0)
 	{
@@ -24,9 +24,9 @@ static void	free_everything(char ***string, unsigned int word_amount)
 	(*string) = NULL;
 }
 
-static unsigned int	word_len(char const *s, char c)
+static uint32_t	word_len(char const *s, char c)
 {
-	unsigned int	i;
+	uint32_t	i;
 
 	i = 0;
 	while (*s != c && *s != 0)
@@ -37,11 +37,11 @@ static unsigned int	word_len(char const *s, char c)
 	return (i);
 }
 
-static unsigned int	get_amount_of_words(char const *s, char c)
+static uint32_t get_amount_of_words(char const *s, char c)
 {
-	unsigned int	amount_words;
-	unsigned int	new_word;
-	unsigned int	i;
+	uint32_t	amount_words;
+	uint32_t	new_word;
+	uint32_t	i;
 
 	amount_words = 0;
 	new_word = 0;
@@ -63,8 +63,8 @@ static unsigned int	get_amount_of_words(char const *s, char c)
 
 static void	add_words_to_string(const char *s, char c, char ***string)
 {
-	unsigned int	new_word;
-	unsigned int	n_words;
+	uint32_t	new_word;
+	uint32_t	n_words;
 
 	new_word = 0;
 	n_words = 0;
@@ -100,7 +100,7 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 char	**ft_split(char const *s, char c)
 {
 	char			**string;
-	unsigned int	amount_of_words;
+	uint32_t	amount_of_words;
 
 	if (s == NULL)
 		return (NULL);
