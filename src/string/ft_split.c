@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/08 17:35:46 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static uint32_t	word_len(char const *s, char c)
 	return (i);
 }
 
-static uint32_t get_amount_of_words(char const *s, char c)
+static uint32_t	get_amount_of_words(char const *s, char c)
 {
 	uint32_t	amount_words;
 	uint32_t	new_word;
@@ -76,7 +76,7 @@ static void	add_words_to_string(const char *s, char c, char ***string)
 			(*string)[n_words] = ft_calloc((word_len(s, c) + 1), sizeof(char));
 			if ((*string)[n_words] == NULL)
 			{
-				free_everything(string, n_words);
+				ft_free_2d_array(string, n_words);
 				return ;
 			}
 			ft_strlcpy((*string)[n_words], s, word_len(s, c) + 1);
@@ -99,7 +99,7 @@ static void	add_words_to_string(const char *s, char c, char ***string)
  */
 char	**ft_split(char const *s, char c)
 {
-	char			**string;
+	char		**string;
 	uint32_t	amount_of_words;
 
 	if (s == NULL)

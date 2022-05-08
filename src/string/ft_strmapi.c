@@ -6,7 +6,7 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:55 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/07 12:12:17 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/08 17:36:02 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(uint32_t, char))
 {
-	char			*string;
+	char		*string;
 	uint32_t	i;
 
 	i = 0;
