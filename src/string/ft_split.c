@@ -6,23 +6,12 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:50:42 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/08 17:35:46 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/15 23:39:19 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-static void	free_everything(char ***string, uint32_t word_amount)
-{
-	while (word_amount > 0)
-	{
-		--word_amount;
-		free((*string)[word_amount]);
-	}
-	free((*string));
-	(*string) = NULL;
-}
 
 static uint32_t	word_len(char const *s, char c)
 {
