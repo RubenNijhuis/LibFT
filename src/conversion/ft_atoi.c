@@ -6,13 +6,13 @@
 /*   By: rubennijhuis <rubennijhuis@student.coda      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/12 15:49:49 by rubennijhui   #+#    #+#                 */
-/*   Updated: 2022/05/07 12:15:47 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/05/08 17:34:28 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int32_t overflow_check(const char *str, int32_t sign)
+static int32_t	overflow_check(const char *str, int32_t sign)
 {
 	int32_t	i;
 
