@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/05/22 21:53:39 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/06/22 14:25:17 by jobvan-d      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,7 @@ char		*ft_substr(char const *s, uint32_t start, size_t len);
 
 int32_t		ft_tolower(int32_t c);
 int32_t		ft_toupper(int32_t c);
+
+int			ft_str_contains_char(const char *s, const int c);
 
 #endif
