@@ -81,6 +81,8 @@ SRCS =  misc/ft_free_2d_array.c \
 		string/ft_tolower.c \
 		string/ft_isinset.c \
 		string/ft_str_contains_char.c \
+		string/ft_strtolower.c \
+		string/ft_strtoupper.c \
 
 OBJS = $(addprefix $(OBJS_DIR)/,$(SRCS:.c=.o))
 
