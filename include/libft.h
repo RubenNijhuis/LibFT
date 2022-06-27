@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/06/22 14:46:38 by jobvan-d      ########   odam.nl         */
+/*   Updated: 2022/06/27 18:40:40 by rnijhuis      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void		ft_putendl_fd(char *s, uint32_t fd);
 void		ft_putnbr_fd(int64_t nb, uint32_t fd);
 void		ft_putstr_fd(char *s, uint32_t fd);
 
+void		ft_repl_chr(char *line, char cur, char new);
 char		**ft_split(char const *s, char c);
 char		*ft_strchr(const char *s, int32_t c);
 char		*ft_strdup(const char *s1);
