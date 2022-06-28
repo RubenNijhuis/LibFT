@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/06/27 18:27:50 by rnijhuis      ########   odam.nl          #
+#    Updated: 2022/06/28 13:15:04 by rubennijhui   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,7 @@ SRCS =  misc/ft_free_2d_array.c \
 		string/ft_strtolower.c \
 		string/ft_strtoupper.c \
 		string/ft_repl_chr.c \
+		string/ft_str_occur.c \
 
 OBJS = $(addprefix $(OBJS_DIR)/,$(SRCS:.c=.o))
 
