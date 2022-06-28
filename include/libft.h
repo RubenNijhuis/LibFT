@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/06/27 18:40:40 by rnijhuis      ########   odam.nl         */
+/*   Updated: 2022/06/28 11:04:50 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ uint32_t	ft_nbrlen(int64_t c);
 
 // String
 int32_t		ft_isinset(const char *set, char c);
+uint32_t	ft_str_occur(char *str, char c);
 
 void		ft_putchar_fd(char s, uint32_t fd);
 void		ft_putendl_fd(char *s, uint32_t fd);
