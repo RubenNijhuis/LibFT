@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/06/28 11:04:50 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/06/30 20:42:43 by rubennijhui   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		*ft_memmove(void *dest, void *src, size_t len);
 void		*ft_memset(void *ptr, int32_t c, size_t len);
 
 // Misc
-uint32_t	ft_2d_arrlen(char **arr);
+size_t		ft_2d_arrlen(char **arr);
 void		ft_error(char *str);
 void		ft_free_2d_array(char ***arr, uint32_t item_amount);
 uint32_t	ft_nbrlen(int64_t c);
