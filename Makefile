@@ -6,7 +6,7 @@
 #    By: rubennijhuis <rubennijhuis@student.coda      +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/03/12 15:41:57 by rubennijhui   #+#    #+#                  #
-#    Updated: 2022/06/28 13:15:04 by rubennijhui   ########   odam.nl          #
+#    Updated: 2022/07/13 14:09:09 by jobvan-d      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS =  misc/ft_free_2d_array.c \
 		string/ft_strrchr.c \
 		string/ft_putchar_fd.c \
 		string/ft_substr.c \
+		string/ft_strcmp.c \
 		string/ft_strncmp.c \
 		string/ft_strmapi.c \
 		string/ft_strtrim.c \
