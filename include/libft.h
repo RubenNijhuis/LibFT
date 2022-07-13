@@ -6,7 +6,7 @@
 /*   By: rnijhuis <rnijhuis@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/09 09:46:16 by rnijhuis      #+#    #+#                 */
-/*   Updated: 2022/06/30 20:42:43 by rubennijhui   ########   odam.nl         */
+/*   Updated: 2022/07/13 14:10:24 by jobvan-d      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlen(const char *str);
 char		*ft_strmapi(char const *s, char (*f)(uint32_t, char));
+int32_t		ft_strcmp(const char *s1, const char *s2);
 int32_t		ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strnstr(const char *h, const char *n, size_t len);
 char		*ft_strrchr(const char *s, int32_t c);
